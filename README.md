@@ -1,78 +1,37 @@
-package practica1proceso;
-
+package potrobus;
 import java.util.Scanner;
+public class Potrobus {
 
-public class Practica1Proceso {
-   
     public static void main(String[] args) {
-        
-       int matriza[][],matrizb[][],fil,col,x,y,matrizf[][];
+     Scanner entrada= new Scanner(System.in);
+       datosRuta obj1 = new datosRuta();
+       cosasOlvidadas obj2 = new cosasOlvidadas();
+       tiempoLlegada obj3= new tiempoLlegada();
+       int op;
+       do{
+       System.out.println("seleccione opcion a realizar");
+        System.out.println("1=ver datos de la ruta");
+         System.out.println("2= mostras objetos olvidados ");
+          System.out.println("3=ver tiempo de llegada");
+        int opc = entrada.nextInt();
        
-      Scanner entrada = new Scanner(System.in);
-      System.out.printf("ingrse numero de filas:");
-      fil=entrada.nextInt();
-      System.out.printf("ingrse numero de columnas:");
-      col=entrada.nextInt();
-      
-      if(fil==col){
-      matriza = new int [fil][col];
-      
-      System.out.println("digite los numeros de la primera  matriz ");//pedir la matriz a
-      for(x=0;x<fil;x++){
-           for(y=0;y<col;y++){
-               System.out.print("["+x+"]["+y+"]=");
-               matriza[x][y] = entrada.nextInt();
-           }
-      }
-      
-      matrizb = new int [fil][col];
-      
-      System.out.println("digite los numeros de la segunda  matriz ");//pedir la matriz b
-      for(x=0;x<fil;x++){
-           for(y=0;y<col;y++){
-               System.out.print("["+x+"]["+y+"]=");
-               matrizb[x][y] = entrada.nextInt();
-           }
-      }
-
-      for(x=0;x<fil;x++){//imprimir la matriz a 
-           for(y=0;y<col;y++){
-               System.out.print(matriza[x][y]);
-           }
-           System.out.println("");  
-           }
-      
-      System.out.println("*");//un espacio para que no se vean juntas 
-      
-      for(x=0;x<fil;x++){//imprimir la matriz b
-           for(y=0;y<col;y++){
-               System.out.print(matrizb[x][y]);
-           }
-           System.out.println("");
-              
-           }
-      matrizf = new int [fil][col];
-      for(x=0;x<fil;x++){//multtiplicacion de  las matrices
-           for(y=0;y<col;y++){
-               matrizf[x][y] = matriza[x][y] * matrizb[x][y];
-           }
-           System.out.println("");
-              
-           }
-       System.out.println("el resulatdo es");//imprimir el resultado
-        for(x=0;x<fil;x++){//imprimir el resultdo
-           for(y=0;y<col;y++){
-               System.out.print(matrizf[x][y]);
-           }
-           System.out.println("");
-              
-           }  
+       switch(opc){
+           
+           case 1:
+             obj1.verDatos();
+             break;
+           case 2:   
+            obj2.mostrarObjetosOlvidados();
+           break;
+           case 3:
+               obj3.verTiempo();
+               break;
+       }
+       System.out.println("regresar al menu oprima 1");
+        op = entrada.nextInt();
+         
+       }while(op!=0);     
         
-        
-      }
-      else{
-           System.out.println("no se puede realizar la operacion");
-      }
     }
     
 }
