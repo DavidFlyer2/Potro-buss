@@ -1,0 +1,71 @@
+package potrobus;
+
+import java.util.Scanner;
+
+public class iniciarSesion {
+    
+    Scanner scanner = new Scanner(System.in);
+        int maxUsuarios = 10;
+        String[] usuarios = new String[maxUsuarios];
+        String[] contrasenas = new String[maxUsuarios];
+        int numUsuarios = 0;
+
+        boolean salir = false;
+public void iniciar(){
+        
+            System.out.println("1. Registro");
+            System.out.println("2. Iniciar Sesion");
+            System.out.println("3. Salir");
+            System.out.print("Selecciona una opcion: ");
+            int opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar el buffer
+
+            switch (opcion) {
+                case 1:
+                    if (numUsuarios < maxUsuarios) {
+                        System.out.print("Nombre de usuario: ");
+                        String nuevoUsuario = scanner.nextLine();
+                        System.out.print("Contraseña: ");
+                        String nuevaContrasena = scanner.nextLine();
+
+                        usuarios[numUsuarios] = nuevoUsuario;
+                        contrasenas[numUsuarios] = nuevaContrasena;
+                        numUsuarios++;
+
+                        System.out.println("¡Registro exitoso!");
+                    } else {
+                        System.out.println("No es posible agregar más usuarios.");
+                    }
+                    break;
+                case 2:
+                    System.out.print("Nombre de usuario: ");
+                    String usuarioLogin = scanner.nextLine();
+                    System.out.print("Contraseña: ");
+                    String contrasenaLogin = scanner.nextLine();
+
+                    boolean inicioSesionExitoso = false;
+                    for (int i = 0; i < numUsuarios; i++) {
+                        if (usuarios[i] != null && usuarios[i].equals(usuarioLogin) && contrasenas[i].equals(contrasenaLogin)) {
+                            inicioSesionExitoso = true;
+                            break;
+                        }
+                    }
+
+                    if (inicioSesionExitoso) {
+                        System.out.println("Inicio de sesion exitoso. ¡Bienvenido!");
+                    } else {
+                        System.out.println("Nombre de usuario o contraseña incorrectos.");
+                    }
+                    break;
+                case 3:
+                    salir = true;
+                    break;
+                default:
+                    System.out.println("Opción no valida.");
+            }
+        }
+
+       
+    }
+    
+
