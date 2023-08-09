@@ -1,0 +1,30 @@
+package potrobus;
+ import java.util.Scanner;
+
+public class tarifa {
+    
+    
+   double[] tarifa = { 10.0, 15.0, 20.0, 25.0 };
+   String[] ruta={"pachuca","polideoportivo"};
+    private int dineropropio;
+    
+    Scanner entrada= new Scanner(System.in);
+            
+    
+    
+    public void verTarifa(){
+        System.out.println("ruta:"+ruta[1]+"precio:"+tarifa[1]);
+    }
+    public void administrarFinanzas(){
+        System.out.println("cuanto dinero tienes");
+        dineropropio=entrada.nextInt();
+        
+        if(dineropropio>0){
+          System.out.println("tengo dinero suficiente");
+        }
+        else{
+            System.out.println("dinero insuficiente"); 
+        }
+    }
+    
+}
