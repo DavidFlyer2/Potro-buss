@@ -1,0 +1,12 @@
+
+package potrobus;
+public class tiempoLlegada {
+   
+    int[] tiempo= {5,10,15,20,25,30};
+    
+    public void verTiempo(){
+        System.out.println("tiempo aproximado de llegada de la combi:"+tiempo[2]+"minutos");
+    }
+    
+    
+}
