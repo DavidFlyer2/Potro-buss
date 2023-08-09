@@ -1,0 +1,16 @@
+
+package potrobus;
+
+public class datosRuta {
+   
+     String[] nombresRutas = {"Pachuca", "Zempoala", "Polideportivo", "Sahagún", "Tuzos"};
+        String[] nombresChoferes = {"Juan Perez", "Maria Gonzalez", "Luis Ramirez", "Ana Martinez", "Carlos Lopez"};
+    double distancia = Math.random() * 20;
+
+    public void verDatos() {
+        System.out.println("Nombre de la ruta: " + nombresRutas[1]);
+        System.out.println("Distancia: " + distancia + " km");
+        System.out.println("Nombre del chofer: " + nombresChoferes[2]);
+    }
+    
+}
