@@ -1,0 +1,24 @@
+
+package potrobus;
+
+public class cosasOlvidadas {
+   
+    String[] Objetos= { "Billetera", "Llaves","Paraguas","Gafas de sol","Teléfono móvil","Libro","Bolsa de compras","Auriculares", "Cargador", "Paraguas"};
+
+    
+    
+    public void mostrarObjetosOlvidados() {
+        
+        System.out.println("1-" + Objetos[0]);
+         System.out.println("2-" + Objetos[1]);
+          System.out.println("3-" + Objetos[2]);
+           System.out.println("4-" + Objetos[3]);
+            System.out.println("5-" + Objetos[4]);
+             System.out.println("6-" + Objetos[5]);
+              System.out.println("7-" + Objetos[6]);
+               System.out.println("8-" + Objetos[7]);
+                System.out.println("9-" + Objetos[8]);
+                 System.out.println("10-" + Objetos[9]);
+   
+    }   
+}
